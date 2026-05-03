@@ -1,0 +1,62 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 2,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1777705058.8971748,
+            "stop": 1777705059.0204127
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_pmars_works",
+                "status": "passed",
+                "duration": 0.08518816158175468,
+                "start": 1777705058.9129574,
+                "stop": 1777705058.9984274,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_headless_no_x11",
+                "status": "passed",
+                "duration": 0.007469505071640015,
+                "start": 1777705058.9986615,
+                "stop": 1777705059.006361,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_debian_source_used",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0006887968629598618,
+                "start": 1777705059.0065715,
+                "stop": 1777705059.0184944,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_debian_source_used():\n        \"\"\"Verify pmars source was obtained from Debian packages.\"\"\"\n        source_dirs = list(Path(\"/app\").glob(\"pmars-*\"))\n>       assert source_dirs, (\n            \"No pmars source directory found in `/app`,\"\n            \"Source must be extracted to `/app` as instructed.\"\n        )\nE       AssertionError: No pmars source directory found in `/app`,Source must be extracted to `/app` as instructed.\nE       assert []\n\n/tests/test_outputs.py:63: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_built_from_source",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004175715148448944,
+                "start": 1777705059.0186317,
+                "stop": 1777705059.0202825,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_built_from_source():\n        \"\"\"Verify pmars was actually built from source code.\"\"\"\n        source_dirs = list(Path(\"/app\").glob(\"pmars-*\"))\n>       assert source_dirs, (\n            \"No pmars source directory found in `/app`,\"\n            \"Source must be extracted to `/app` as instructed.\"\n        )\nE       AssertionError: No pmars source directory found in `/app`,Source must be extracted to `/app` as instructed.\nE       assert []\n\n/tests/test_outputs.py:76: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}
